@@ -11,8 +11,8 @@ const loaderEl = document.querySelector('.loader');
 
 const lightbox = new SimpleLightbox('.js-gallery a');
 
-const showLoader = () => (loaderEl.hidden = false);
-const hideLoader = () => (loaderEl.hidden = true);
+const showLoader = () => (loaderEl.style.display = 'block');
+const hideLoader = () => (loaderEl.style.display = 'none');
 
 const onSearchFormSubmit = async event => {
   event.preventDefault();
