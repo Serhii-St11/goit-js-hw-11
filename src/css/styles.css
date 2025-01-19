@@ -1,18 +1,110 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+@import url('https://cdn.jsdelivr.net/npm/css-loaders@1.0.0/css-loaders.min.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+header {
+  padding: 20px;
+  background-color: #e6e9ed;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.input {
+  width: 360px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #0767e6;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+}
+.btn-search {
+  width: 130px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #0767e6;
+  color: #f4f8f8;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: #05459a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+} 
+
+.gallery-card {
+  list-style: none;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 250px;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.gallery-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.gallery-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-card p:first-of-type {
+  font-weight: bold;
+  color: #333;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  margin: 40px auto;
+  border: 5px solid #ccc;
+  border-top-color: #0767e6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none; 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
