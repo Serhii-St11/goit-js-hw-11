@@ -20,7 +20,7 @@ const onSearchFormSubmit = async event => {
   const query = event.currentTarget.elements.user_query.value.trim();
   if (!query) {
     iziToast.error({
-      title: 'Ошибка',
+      title: 'Error',
       message: 'Please enter a search query!',
     });
     return;
@@ -32,7 +32,7 @@ const onSearchFormSubmit = async event => {
     const data = await fetchImages(query);
     if (data.hits.length === 0) {
       iziToast.warning({
-        title: 'Внимание',
+        title: 'Attention',
         message: 'No images found!',
       });
       return;
@@ -42,7 +42,7 @@ const onSearchFormSubmit = async event => {
   } catch (error) {
     console.error(error);
     iziToast.error({
-      title: 'Ошибка',
+      title: 'Error',
       message: 'Failed to fetch images!',
     });
   } finally {
